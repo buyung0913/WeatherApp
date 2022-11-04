@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    tools:showIn="@layout/layout_info">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_sunrise"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:contentDescription="@string/desc_sunrise"
+                android:src="@drawable/ic_sunrise"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_sunrise_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/slate_500"
+                app:layout_constraintEnd_toEndOf="@id/img_sunrise"
+                app:layout_constraintStart_toStartOf="@id/img_sunrise"
+                app:layout_constraintTop_toBottomOf="@id/img_sunrise"
+                tools:text="05:42 AM" />
+
+            <TextView
+                android:id="@+id/txt_real_feel_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_sunrise_time"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_real_feel"
+                android:textColor="@color/slate_500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_sunrise_time" />
+
+            <TextView
+                android:id="@+id/txt_real_feel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/degree_celsius_symbol_with_temp"
+                android:textColor="@color/slate_500"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/txt_real_feel_label"
+                app:layout_constraintTop_toBottomOf="@id/txt_real_feel_label" />
+
+            <TextView
+                android:id="@+id/txt_cloudiness_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_cloudiness"
+                android:textColor="@color/slate_500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_real_feel_text" />
+
+            <TextView
+                android:id="@+id/txt_cloudiness_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/slate_500"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/txt_cloudiness_label"
+                app:layout_constraintTop_toBottomOf="@id/txt_cloudiness_label"
+                tools:text="42%" />
+
+            <TextView
+                android:id="@+id/txt_wind_speed_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_wind_speed"
+                android:textColor="@color/slate_500"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_cloudiness_text" />
+
+            <TextView
+                android:id="@+id/txt_wind_speed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/slate_500"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/txt_wind_speed_label"
+                app:layout_constraintTop_toBottomOf="@id/txt_wind_speed_label"
+                tools:text="11.1km/h" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_sunset"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:contentDescription="@string/desc_sunset"
+                android:src="@drawable/ic_sunset"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_sunset_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/slate_500"
+                app:layout_constraintEnd_toEndOf="@id/img_sunset"
+                app:layout_constraintStart_toStartOf="@id/img_sunset"
+                app:layout_constraintTop_toBottomOf="@id/img_sunset"
+                tools:text="06:10 PM" />
+
+            <TextView
+                android:id="@+id/txt_humidity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_humidity"
+                android:textColor="@color/slate_500"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_sunset_time" />
+
+            <TextView
+                android:id="@+id/txt_humidity_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/slate_500"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/txt_humidity_label"
+                app:layout_constraintTop_toBottomOf="@id/txt_humidity_label"
+                tools:text="65%" />
+
+            <TextView
+                android:id="@+id/txt_pressure_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_pressure"
+                android:textColor="@color/slate_500"
+                app:layout_constraintStart_toStartOf="@id/txt_humidity_text"
+                app:layout_constraintTop_toBottomOf="@id/txt_humidity_text" />
+
+            <TextView
+                android:id="@+id/txt_pressure_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/slate_500"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/txt_pressure_label"
+                app:layout_constraintTop_toBottomOf="@id/txt_pressure_label"
+                tools:text="1007hPa" />
+
+            <TextView
+                android:id="@+id/txt_visibility_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_visibility"
+                android:textColor="@color/slate_500"
+                app:layout_constraintStart_toStartOf="@id/txt_pressure_text"
+                app:layout_constraintTop_toBottomOf="@id/txt_pressure_text" />
+
+            <TextView
+                android:id="@+id/txt_visibility_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/slate_500"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/txt_visibility_label"
+                app:layout_constraintTop_toBottomOf="@id/txt_visibility_label"
+                tools:text="8.578KM" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

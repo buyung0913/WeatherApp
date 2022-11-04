@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="desc_add_city">addCity</string>
+    <string name="desc_more">moreOptions</string>
+    <string name="desc_back">backStack</string>
+    <string name="degree_celsius_symbol">°C</string>
+    <string name="degree_celsius_symbol_with_temp">32.9°C</string>
+    <string name="degree_celsius_symbol_with_temp2">32°C</string>
+    <string name="degree_celsius_symbol_with_temp3">Evening\n32°C</string>
+    <string name="desc_sunrise">icon of sunrise</string>
+    <string name="desc_sunset">icon of sunset</string>
+    <string name="label_real_feel">Real Feel</string>
+    <string name="label_humidity">Humidity</string>
+    <string name="label_cloudiness">Cloudiness</string>
+    <string name="label_pressure">Pressure</string>
+    <string name="label_wind_speed">Wind speed</string>
+    <string name="label_visibility">Visibility</string>
+    <string name="btn_label_forecast">7-day forecast</string>
+    <string name="label_search_hint">Enter Location</string>
+    <string name="txt_no_result">No results found</string>
+    <string name="text_added">Added</string>
+    <string name="text_share">Share</string>
+    <string name="txt_feedback">Feedback</string>
+    <string name="desc_delete">Delete items</string>
+</resources>

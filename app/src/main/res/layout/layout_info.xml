@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/desc_more"
+        android:onClick="onBackButtonClicked"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_search"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/desc_add_city"
+        android:onClick="onAddButtonClicked"
+        android:scaleX="-1"
+        android:src="@drawable/ic_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textColor="@color/slate_500"
+        android:textSize="72sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_city_name"
+        app:layout_constraintStart_toStartOf="@+id/txt_city_name"
+        app:layout_constraintTop_toBottomOf="@id/txt_city_name"
+        tools:text="30" />
+
+    <TextView
+        android:id="@+id/txt_temp_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/degree_celsius_symbol"
+        android:textColor="@color/slate_500"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_temp"
+        app:layout_constraintTop_toTopOf="@+id/txt_temp" />
+
+    <TextView
+        android:id="@+id/txt_city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/slate_500"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/img_search"
+        app:layout_constraintStart_toStartOf="@id/img_back"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Jakarta" />
+
+    <TextView
+        android:id="@+id/txt_weather_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/slate_500"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txt_temp"
+        app:layout_constraintStart_toStartOf="@+id/txt_temp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_temp"
+        tools:text="Cloudy" />
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/layout_additional_weather_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/container_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_weather_condition" />
+
+    <LinearLayout
+        android:id="@+id/container_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_forecast"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button"
+            android:onClick="onForecastButtonClicked"
+            android:text="@string/btn_label_forecast"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_delete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@id/btn_forecast"
+            android:layout_weight="0"
+            android:onClick="onInsertFavorite"
+            android:src="@drawable/heart"
+            android:visibility="visible" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
