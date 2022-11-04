@@ -39,36 +39,36 @@ class SavedCityActivity : AppCompatActivity(),
         repository = CityRepository(CityDatabase(this))
         mAdapter = SavedCityAdapter()
 
-        setUpRecyclerView()
-        setUpObservers()
+//        setUpRecyclerView()
+//        setUpObservers()
     }
 
-    private fun setUpObservers() {
-        viewModel.getSavedCities(repository, 1).observe(this) { cities ->
-            mAdapter.differ.submitList(cities)
-        }
-    }
-
-    private fun setUpRecyclerView() {
-        rv_saved_city.apply {
-            layoutManager = LinearLayoutManager(this@SavedCityActivity)
-            setHasFixedSize(true)
-            adapter = mAdapter
-        }
-
-        ItemTouchHelper(RecyclerItemTouchHelper(this@SavedCityActivity)).attachToRecyclerView(
-            rv_saved_city
-        )
-
-        mAdapter.setOnItemClickListener {
-            startActivity(
-                Intent(
-                    this@SavedCityActivity,
-                    WeatherDetailsActivity::class.java
-                ).putExtra(WeatherDetailsActivity.CITY, it.id.toString())
-            )
-        }
-    }
+//    private fun setUpObservers() {
+//        viewModel.getSavedCities(repository, 1).observe(this) { cities ->
+//            mAdapter.differ.submitList(cities)
+//        }
+//    }
+//
+//    private fun setUpRecyclerView() {
+//        rv_saved_city.apply {
+//            layoutManager = LinearLayoutManager(this@SavedCityActivity)
+//            setHasFixedSize(true)
+//            adapter = mAdapter
+//        }
+//
+//        ItemTouchHelper(RecyclerItemTouchHelper(this@SavedCityActivity)).attachToRecyclerView(
+//            rv_saved_city
+//        )
+//
+//        mAdapter.setOnItemClickListener {
+//            startActivity(
+//                Intent(
+//                    this@SavedCityActivity,
+//                    WeatherDetailsActivity::class.java
+//                ).putExtra(WeatherDetailsActivity.CITY, it.id.toString())
+//            )
+//        }
+//    }
 
     fun onSearchTextClicked(view: View) {
         val intent = Intent(this@SavedCityActivity, SearchActivity::class.java)

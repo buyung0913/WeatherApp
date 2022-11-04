@@ -17,8 +17,9 @@
 
     <TextView
         android:id="@+id/txt_city_search"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:layout_below="@id/include4"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
@@ -33,11 +34,11 @@
         android:transitionName="@string/label_search_hint"
         app:drawableStartCompat="@drawable/ic_search" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_saved_city"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/txt_city_search"
-        android:layout_marginTop="8dp"
-        tools:listitem="@layout/item_saved_city" />
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/rv_saved_city"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_below="@id/txt_city_search"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        tools:listitem="@layout/item_saved_city" />-->
 </RelativeLayout>
